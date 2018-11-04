@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比价搜索</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/category.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+      <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+          <div class="mui-scroll">
+              <a class="mui-control-item">
+                  首页
+              </a>
+              <a class="mui-control-item">
+                  省钱控
+              </a>
+              <a class="mui-control-item">
+                  查看历史价
+              </a>
+              <a class="mui-control-item mui-active">
+                  比价搜索
+              </a>
+              <a class="mui-control-item">
+                  国内折扣
+              </a>
+              <a class="mui-control-item">
+                  白菜价
+              </a>
+              <a class="mui-control-item">
+                  小时风云榜
+              </a>
+          </div>
+      </div>
+  </nav>
+  
+  <!-- 主体部分 -->
+  <main id="main">
+    <section id="categoryPanel">
+        <ul class="mui-table-view"> 
+        
+        </ul>        
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+
+
+  <script id="firstCateTpl" type="text/html">
+    {{each result}}
+    <li class="mui-table-view-cell mui-collapse" data-id="{{$value.titleId}}">
+        <a class="mui-navigate-right first-cate" href="#" >{{$value.title}}</a>
+        <div class="mui-collapse-content">
+          <div class="mui-row">
+            
+          </div>
+        </div>
+    </li>
+    {{/each}}
+  </script>
+      
+  <script id="secondCateTpl" type="text/html">
+    {{each result value}}
+    <div class="mui-col-xs-4" data-cateid='{{value.categoryId}}'>{{value.category}}</div>
+    {{/each}}
+  </script>
+</body>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/category.js"></script>
+
+</html>

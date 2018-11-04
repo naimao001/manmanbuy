@@ -1,0 +1,134 @@
+@import 'base.less';
+body {
+	// background-color: #fff;
+}
+
+#main {
+	#product {
+		background-color: #fff;
+		padding: 10px 10px 20px 10px;
+		text-align: center;
+		.product-content {
+			.pic {
+				width: 201px;
+				height: 201px;
+				margin: 0 auto;
+				img {
+					width: 100%;
+				}
+			}
+			.introductions {
+				font-size: 12px;
+				color: #999;
+				span {
+					margin-right: 5px;
+				}
+			}
+			.title {
+				font-size: 22px;
+				color: rgb(15, 9, 9);
+				font-weight: 600;
+			}
+			.price {
+				font-size: 16px;
+				color: #f85000;
+			}
+			.straight-href {
+				.mui-btn {
+					width: 150px;
+					height: 35px;
+					color: #fff;
+					background-color: #f85000;
+					border-radius: 8px;
+				}
+			}
+			.description {
+				margin-top: 20px;
+				text-align: left;
+				font-size: 16px;
+				color: #000;
+			}
+		}
+	}
+	#new-comment {
+		background-color: #fff;
+		h4 {
+			line-height: 30px;
+			text-align: center;
+			margin-top: 0;
+			margin-bottom: 0;
+			background-color: #eee;
+		}
+		.productComment {
+			padding: 5px;
+			.tit {
+				font-size: 16px;
+			}
+			textarea {
+				position: relative;
+			}
+			.ctrl {
+				position: absolute;
+				right: 6px;
+				bottom: -108px;
+				.tjdp {
+					border: 1px solid #ff841d;
+					background-color: #ff841d;
+					border-radius: 10px;
+				}
+			}
+
+			.reply {
+        + .tit {
+          margin-top: 10px;
+				}
+      }
+      #newcomment {
+        margin-bottom: 20px;
+      }
+			.list {
+        padding: 10px 5px 20px;
+				ul {
+					li {
+						display: flex;
+						.userimg {
+							width: 40px;
+							height: 40px;
+							img {
+								width: 100%;
+								border-radius: 50%;
+							}
+						}
+					}
+					.con {
+            flex: 1;
+            margin-left: 10px;;
+						.name {
+							display: flex;
+							justify-content: space-between;
+							font-size: 14px;
+							.username {
+								color: #94bdd6;
+							}
+							.time {
+								color: #999;
+							}
+						}
+					}
+
+					.content {
+            margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	margin-top: 10px;
+	p {
+		margin-bottom: 0px;
+		text-align: center;
+	}
+}

@@ -1,0 +1,133 @@
+@import 'base.less';
+body {
+	// background-color: #fff;
+}
+
+
+
+#pic-nav {
+	padding: 10px;
+	background-color: #fff;
+	ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			width: 25%;
+			a {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+				img {
+					width: 60px;
+				}
+				p {
+					font-size: 14px;
+					margin-top: 10px;
+					color: #5a5a5a;
+				}
+			}
+		}
+	}
+}
+
+#main {
+	#discount-rec {
+		.discount-title {
+			background-color: #ff9000;
+			background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+			height: 40px;
+			position: relative;
+			padding-left: 8px;
+			h4 {
+				margin: 0;
+				line-height: 40px;
+				color: #fff;
+			}
+			img {
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: 5px;
+				top: 10px;
+			}
+		}
+		.discount-content {
+			background-color: #fff;
+			border-bottom: 1px solid @border-color;
+			padding: 14px 8px;
+			display: flex;
+			.left {
+				width: 100px;
+				height: 100px;
+				img {
+					width: 100%;
+				}
+			}
+			.right {
+				font-size: 16px;
+				flex: 1;
+				.description {
+					color: #000;
+					span {
+						color: #ff6c00;
+					}
+				}
+				.right-b {
+					margin-top: 20px;
+					color: #999;
+					font-size: 12px;
+					display: flex;
+					justify-content: space-between;
+					.store-time {
+					}
+				}
+			}
+		}
+	}
+}
+#more-bar {
+	padding: 5px 10px;
+	a {
+		display: block;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+		font-size: 14px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+}
+#brand-ph {
+	background-color: #ff9000;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+	height: 40px;
+	position: relative;
+	padding-left: 8px;
+	margin-top: 10px;
+	h4 {
+		margin: 0;
+		line-height: 40px;
+		color: #fff;
+	}
+	img {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		right: 5px;
+		top: 10px;
+	}
+}
+
+#footer {
+	margin-top: 10px;
+	p {
+		margin-bottom: 0px;
+		text-align: center;
+	}
+}
+.show {
+	display: block;
+}

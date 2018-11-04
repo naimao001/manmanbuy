@@ -1,0 +1,125 @@
+@import 'base.less';
+#main {
+	.bread-nav {
+		height: 40px;
+		background-color: #ebebeb;
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+		border-top: solid 1px #ebebeb;
+		border-bottom: 1px solid #ccc;
+		line-height: 40px;
+		padding-left: 8px;
+		font-size: 14px;
+	}
+	.product {
+		background-color: #fff;
+		.product-content {
+			padding: 5px;
+			.pic {
+				width: 160px;
+				height: 160px;
+				margin: 0 auto;
+				img {
+					width: 100%;
+				}
+			}
+			.product-title {
+				p {
+					color: #000;
+					font-size: 16px;
+				}
+			}
+			.price-comment {
+				display: flex;
+				// justify-content: space-between;
+				font-size: 14px;
+				color: #999;
+				text-align: left;
+				.price-min {
+					flex: 1;
+				}
+				.goodscomment {
+					flex: 1;
+				}
+			}
+		}
+	}
+	.tabBar {
+		margin-top: 20px;
+		background-color: #ffbb00;
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+		.mui-row {
+			> div {
+				line-height: 34px;
+				text-align: center;
+				color: white;
+				&:nth-of-type(2) {
+					border-left: solid 1px #c14d00;
+					border-right: solid 1px #c14d00;
+				}
+			}
+		}
+	}
+	.than-price-buy {
+		background-color: #fff;
+		.title {
+      padding-left: 10px;
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid #ccc;
+			line-height: 50px;
+			.right {
+				.mui-btn-danger {
+					color: #fff;
+					background-color: #ff5200;
+					border-radius: 8px;
+          margin-top: 5px;
+          margin-right: 5px;
+				}
+				.price {
+					color: red;
+					margin-right: 10px;
+				}
+			}
+		}
+		.attention {
+			font-size: 12px;
+			color: #999;
+			padding: 5px 0;
+		}
+	}
+	.comment {
+		background-color: #fff;
+		.title {
+			background-color: #dbdbdb;
+			line-height: 35px;
+      border-bottom: 1px solid #000;
+      text-align: center;
+      font-size: 14px;
+		}
+		.content {
+			border-bottom: 1px solid #ccc;
+			padding: 10px 5px 5px 5px;
+			.name-time {
+				display: flex;
+				justify-content: space-between;
+        color: #999;
+        margin-bottom: 3px;
+				.name {
+					font-size: 14px;
+				}
+				.time {
+					font-size: 12px;
+				}
+			}
+			.buy-from {
+				color: #999;
+        text-align: right;
+        margin-bottom: 5px;
+      }
+      .text {
+        font-size: 14px;
+        color: #000;
+      }
+		}
+	}
+}

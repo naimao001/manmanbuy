@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/cn-discount.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+      <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+          <div class="mui-scroll">
+              <a class="mui-control-item mui-active">
+                  首页
+              </a>
+              <a class="mui-control-item" id="lessmoney">
+                  省钱控
+              </a>
+              <a class="mui-control-item">
+                  查看历史价
+              </a>
+              <a  class="mui-control-item" id="category" >
+                  比价搜索
+              </a>
+              <a class="mui-control-item">
+                  国内折扣
+              </a>
+              <a class="mui-control-item">
+                  白菜价
+              </a>
+              <a class="mui-control-item">
+                  小时风云榜
+              </a>
+          </div>
+      </div>
+  </nav>
+  
+  <!-- 主体部分 -->
+  <main id="main">
+   <section id="product">
+     <div class="product-content">
+       <div class="pic">
+         <img src="http://img2019.manmanbuy.com/r_img/img/20181102/19/d0ca553255ff47a7ab6bbbae844b2f3d.jpg?imageMogr2/thumbnail/218x218" alt="">
+       </div>
+       <p class="title">西域美农新疆特产星和田红枣250g*2</p>
+       <p class="price">19.8</p>
+       <p class="from-time">
+         <span class="from">京东商城</span>
+         <span class="time">10-22 13:28</span>
+       </p>
+     </div>
+   </section>
+  
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+</body>
+
+<script id="cndiscountTpl" type="text/html">
+  {{each result}}
+  <div class="product-content" data-productid="{{$value.productId}}">
+      <div class="pic">
+        {{@$value.productImg}}
+      </div>
+      <p class="title">{{$value.productName}}</p>
+      <p class="price">{{$value.productPrice}}</p>
+      <p class="from-time">
+        <span class="from">{{$value.productFrom}}</span>
+        <span class="time">{{$value.productTime}}</span>
+      </p>
+    </div>{{/each}}
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/cn-discount.js"></script>
+
+</html>

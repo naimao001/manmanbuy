@@ -1,0 +1,50 @@
+@import 'base.less';
+body {
+	// background-color: #fff;
+}
+
+#main {
+	#product {
+		.product-content {
+			background-color: #fff;
+			border-bottom: 1px solid @border-color;
+			padding: 14px 8px;
+			display: flex;
+			.left {
+				width: 100px;
+				height: 100px;
+				img {
+					width: 100%;
+				}
+			}
+			.right {
+				font-size: 16px;
+				flex: 1;
+				.description {
+					color: #000;
+					span {
+						color: #ff6c00;
+					}
+				}
+				.right-b {
+					margin-top: 20px;
+					color: #999;
+					font-size: 12px;
+					display: flex;
+					justify-content: space-between;
+					.store-time {
+					}
+				}
+			}
+		}
+	}
+}
+
+#footer {
+	margin-top: 10px;
+	p {
+		margin-bottom: 0px;
+		text-align: center;
+	}
+}
+

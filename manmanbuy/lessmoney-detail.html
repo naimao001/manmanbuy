@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/lessmoney-detail.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+      <div class="mui-scroll">
+        <a href="index.html" class="mui-control-item mui-active">
+          首页
+        </a>
+        <a class="mui-control-item">
+          省钱控
+        </a>
+        <a class="mui-control-item">
+          查看历史价
+        </a>
+        <a class="mui-control-item" id="category">
+          比价搜索
+        </a>
+        <a class="mui-control-item">
+          国内折扣
+        </a>
+        <a class="mui-control-item">
+          白菜价
+        </a>
+        <a class="mui-control-item">
+          小时风云榜
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体部分 -->
+  <main id="main">
+    <section id="product">
+      <script id="productContentTpl" type="text/html">
+        {{each result}}
+      <div class="product-content">
+          <div class="pic">
+            {{@$value.productImgSm}}
+          </div>
+          <p class="introductions">
+            <span>{{$value.productFrom}}</span> | <span>{{$value.productTime}}</span> | <span> {{$value.productTips}} </span>
+          </p>
+          <p class="title">{{$value.productName}}</p>
+          <p class="price">{{$value.productPinkage}}</p>
+          <div class="straight-href"><button type="button" class="mui-btn">直达链接</button></div>
+          <p class="description">{{$value.productInfo}}</p>
+        </div>
+        {{/each}}
+    </script>
+      <div class="product-content">
+        <div class="pic">
+          <img src="http://img2019.manmanbuy.com/r_img/img/20181101/20/f7763f05d9b74b18bd0753b17b05749b.jpg" alt="">
+        </div>
+        <p class="introductions">
+          <span>京东商城</span> | <span>11-01 20:06</span> | <span> 拼了命 | 慢慢买</span>
+        </p>
+        <p class="title">金龙鱼 苏北米 软香稻大米 10KG * 2件</p>
+        <p class="price">82.80元 (合41.4元/件)</p>
+        <div class="straight-href"><button type="button" class="mui-btn">直达链接</button></div>
+        <p class="description">这款金龙鱼 软香稻大米 ，产自苏北地区，采用低温烘干存储等工序，保证大米的品质，采用二氧化碳保鲜包装，防霉防虫，规格10KG。</p>
+      </div>
+    </section>
+    <section id="new-comment">
+      <h4>最新评论</h4>
+      <div class="productComment">
+        <!-- <div class="cu-content-pl ui-border-t">
+          <div class="tit">发表评论</div>
+          <div class="reply">
+            <div class="form">
+              <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+              <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+              <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="移动端凑单品：海天 鲜味 生抽 1.28L"
+                type="hidden">
+              <div class="ctrl">
+                <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+              </div>
+            </div>
+          </div>
+          <div class="tit" id="newcomment">最新评论</div>
+          <div class="list">
+            <ul>
+              <li class="ui-border-b">
+                <div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1466230634_162.jpg"></div>
+                <div class="con">
+                  <div class="name clearfix">
+                    <div class="username">赶鸭子上架</div>
+                    <div class="time">2016/10/25 14:18:45</div>
+                  </div>
+                  <div class="content">比超市便宜了几块</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+</body>
+<script id="productTpl" type="text/html">
+  {{each result }}
+<div class="product-content">
+    <div class="left">
+      {{@$value.productImgSm}}
+    </div>
+    <div class="right clearfix">
+      <p class="description">{{$value.productName}} <span>{{$value.productPinkage}}元包邮</span> </p>
+      <div class="right-b">
+        <span class="store-time">
+          <span>{{$value.productFrom}}</span> |<span>{{$value.productTime}}</span> </span>
+        <span class="comment"><i class="fa fa-comment"></i>{{$value.productComCount}}</span>
+      </div>
+
+    </div>
+  </div>
+{{/each}}
+</script>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/lessmoney-detail.js"></script>
+
+</html>

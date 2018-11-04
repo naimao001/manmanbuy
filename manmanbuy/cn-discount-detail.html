@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/cn-discount-detail.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+      <div class="mui-scroll">
+        <a href="index.html" class="mui-control-item mui-active">
+          首页
+        </a>
+        <a class="mui-control-item">
+          省钱控
+        </a>
+        <a class="mui-control-item">
+          查看历史价
+        </a>
+        <a class="mui-control-item" id="category">
+          比价搜索
+        </a>
+        <a class="mui-control-item">
+          国内折扣
+        </a>
+        <a class="mui-control-item">
+          白菜价
+        </a>
+        <a class="mui-control-item">
+          小时风云榜
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体部分 -->
+  <main id="main">
+    <section id="product">
+      <script id="productContentTpl" type="text/html">
+        {{each result}}
+      <div class="product-content">
+          <p class="title">{{$value.productName}}</p>
+          <p class="price">{{$value.productPinkage}}</p>
+          <p class="introductions">
+              <span>{{$value.productFrom}}</span> | <span>{{$value.productTime}}</span> | <span> {{$value.productTips}} </span>
+            </p>
+            <p class="description">{{$value.productInfo}}</p>
+          <div class="pic">
+            {{@$value.productImg}}
+          </div>
+          <div class="straight-href"><button type="button" class="mui-btn">直达链接</button></div>
+        </div>
+        {{/each}}
+    </script>
+      <div class="product-content">
+        <p class="title">金龙鱼 苏北米 软香稻大米 10KG * 2件</p>
+        <p class="price">82.80元 (合41.4元/件)</p>
+        <p class="introductions">
+          <span>京东商城</span> | <span>11-01 20:06</span> | <span> 拼了命 | 慢慢买</span>
+        </p>
+        <p class="description">这款金龙鱼 软香稻大米 ，产自苏北地区，采用低温烘干存储等工序，保证大米的品质，采用二氧化碳保鲜包装，防霉防虫，规格10KG。</p>
+        <div class="pic">
+          <img src="http://img2019.manmanbuy.com/r_img/img/20181101/20/f7763f05d9b74b18bd0753b17b05749b.jpg" alt="">
+        </div>
+
+        <div class="straight-href"><button type="button" class="mui-btn">前往购买</button></div>
+      </div>
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+</body>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/cn-discount-detail.js"></script>
+
+</html>

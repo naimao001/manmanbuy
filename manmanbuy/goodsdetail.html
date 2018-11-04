@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比价搜索</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/goodsdetail.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+      <div class="mui-scroll">
+        <a class="mui-control-item">
+          首页
+        </a>
+        <a class="mui-control-item">
+          省钱控
+        </a>
+        <a class="mui-control-item">
+          查看历史价
+        </a>
+        <a class="mui-control-item mui-active">
+          比价搜索
+        </a>
+        <a class="mui-control-item">
+          国内折扣
+        </a>
+        <a class="mui-control-item">
+          白菜价
+        </a>
+        <a class="mui-control-item">
+          小时风云榜
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体部分 -->
+  <main id="main">
+    <nav class="bread-nav">
+      <span>首页 > </span><span class="category">奶毛 > </span> <span>格力 KFR-23GW/(23592)NhDa-3</span>
+    </nav>
+    <section class="product">
+      <script id="productHtmlTpl" type="text/html">
+        {{each result}}
+        <div class="product-content">
+            <div class="pic">
+              {{@$value.productImg}}
+            </div>
+              <div class="product-title"><p>{{$value.productName}}</p></div>
+              <div class="price-comment">
+                <span class="price-min">当前最低:¥2249.00</span>
+                <span class="goodscomment">优选评论:3812条</span>
+              </div>
+          </div>
+          {{/each}}
+      </script>
+      
+    </section>
+    <section class="tabBar">
+      <div class="mui-row">
+        <div class="mui-col-xs-4">比价购买</div>
+        <div class="mui-col-xs-4">产品参数</div>
+        <div class="mui-col-xs-4">优先评价</div>
+      </div>
+    </section>
+
+    <section class="than-price-buy">
+      <div class="title">
+         <div class="left">
+            <img src='./images/jd-icon.png' class="icon-jd"></i>
+          <span>京东商城</span>
+         </div>
+         <div class="right">
+            <span class="price">¥1999</span>
+            <button type="button" class="mui-btn mui-btn-danger">去购买</button>
+         </div>
+      </div>
+      <div class="attention">*实际价格由个网站列出来的为准,我们提供的价格可能有数小时或数日的延迟</div>
+    </section>
+    <section class="comment">
+      <script id="commentContentTpl" type="text/html">
+        <div class="title">优选网友评价</div>
+        {{each result}}
+        <div class="content">
+          <p class="name-time">
+            <span class="name">{{$value.comName}}</span>
+            <span class="time">{{$value.comTime}}</span>
+          </p>
+          <p class="buy-from">{{$value.comFrom}}</p>
+          <p class="text">
+            {{$value.comContent}}
+          </p>
+          <p class="huifu">回复</p>
+        </div>
+        {{/each}}
+      </script>
+      <div class="title">优选网友评价</div>
+      <div class="content">
+        <p class="name-time">
+          <span class="name">A***7</span>
+          <span class="time">2018/10/32</span>
+        </p>
+        <p class="buy-from">购买自:京东商城</p>
+        <p class="text">
+            京东一贯的速度！快！昨天下单，中午送，下午安装！靓！新款，造型好看，能关掉显示灯，不影响睡眠。声音确实很安静。冷暖舒适！用一段时间再看看～满意
+        </p>
+        <p class="huifu">回复</p>
+      </div>
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+
+
+</body>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/goodsdetail.js"></script>
+
+</html>

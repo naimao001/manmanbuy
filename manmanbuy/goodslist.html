@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>比价搜索</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/goodslist.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <h1>
+        <a href="#"></a>
+      </h1>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="商品比价 查看历史价">
+    </form>
+    <a href="#" class="download">下载</a>
+  </header>
+  <!-- 滑动滚动条 -->
+  <nav id="slide-nav">
+    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+      <div class="mui-scroll">
+        <a class="mui-control-item">
+          首页
+        </a>
+        <a class="mui-control-item">
+          省钱控
+        </a>
+        <a class="mui-control-item">
+          查看历史价
+        </a>
+        <a class="mui-control-item mui-active">
+          比价搜索
+        </a>
+        <a class="mui-control-item">
+          国内折扣
+        </a>
+        <a class="mui-control-item">
+          白菜价
+        </a>
+        <a class="mui-control-item">
+          小时风云榜
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体部分 -->
+  <main id="main">
+    <section id="filterBar">
+      <ul>
+        <li><a href="#" class="active">首页</a></li>
+        <li><a href="#">销量</a></li>
+        <li><a href="#">价格</a></li>
+        <li><a href="#">筛选</a></li>
+      </ul>
+    </section>
+    <section id="productList">
+      
+      <div class="product">
+          <div class="left">
+              <img src="./images/discount-image.jpg" alt="">
+            </div>
+            <div class="right clearfix">
+              <p class="description">双11预售: 特步 经典情侣款小白鞋 <span>55元包邮</span> </p>
+              <p class="price">¥5555</p>
+              <div class="right-b">
+                <span class="store-time">
+                <span>有5个商城报价 </span>
+                <span class="comment">有11111人评论</span>
+                </span>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section id="pagination">
+
+        <button type="button" class="mui-btn perv">上一页</button>
+          <select class="pageSelect">
+            <option value="1">1/3</option>
+            <option value="2">2/3</option>
+            <option value="3">3/3</option>
+          </select>
+        <button type="button" class="mui-btn next">下一页</button>
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+
+  <script id="productHtmlTpl" type="text/html">
+    {{each result}}
+    <div class="product" data-cateid="{{$value.categoryId}}"  data-productid="{{$value.productId}}">
+    <div class="left">
+       {{@$value.productImg}}
+      </div>
+      <div class="right clearfix">
+        <p class="description">{{$value.productName}}</p>
+        <p class="price">{{$value.productPrice}}</p>
+        <div class="right-b">
+          <span class="store-time">
+          <span>{{$value.productQuote}} </span>
+          <span class="comment">{{$value.productCom}}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+  <script id="paginationHtmlTpl" type="text/html">
+  <button type="button" class="mui-btn prev">上一页</button>
+          <select class="pageSelect">
+            {{each arr}}
+            <option value="{{$index+1}}" data-pageid="{{$index+1}}">{{$index+1}}/{{totalCount/pagesize}}</option>
+            {{/each}}
+          </select>
+        <button type="button" class="mui-btn next" data-pagecount='{{totalCount/pagesize}}'>下一页</button>
+  </script>
+</body>
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/goodslist.js"></script>
+
+</html>

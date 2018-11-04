@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet/less" href="less/cabbageprice.less">
+  <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header id="header">
+    <div class="logo">
+      <a href="#">白菜价</a>
+    </div>
+    <form>
+      <i class="search-icon fa fa-search"></i>
+      <input type="search" class="search" placeholder="好宝贝 等你搜">
+    </form>
+    <a href="#" class="fa fa-list"></a>
+  </header>
+  <!-- 滑动滚动条 -->
+
+  <nav id="pic-nav">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="images/fire.png" alt="">
+          <p>热销</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/9.9discout.png" alt="">
+          <p>9.9包邮</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/gift.png" alt="">
+          <p>19块邮</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="images/top.png" alt="">
+          <p>超级人气榜</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- 主体部分 -->
+  <main id="main">
+    <section class="superSentiment">
+      <div class="title">
+        <h4>超级人气榜</h4>
+        <span>更多</span>
+      </div>
+      <div class="content">
+        <a class="">
+          <div class="pic">
+            <img src="https://img.alicdn.com/imgextra/i3/3405808014/TB1igxtjkKWBuNjy1zjXXcOypXa_!!0-item_pic.jpg_310x310.jpg"
+              alt="">
+          </div>
+          <p class="name">[独霸保罗]男士</p>
+          <p class="price">¥5.1 <span>券后</span></p>
+        </a>
+        <a class="">
+          <div class="pic">
+            <img src="https://img.alicdn.com/imgextra/i3/3405808014/TB1igxtjkKWBuNjy1zjXXcOypXa_!!0-item_pic.jpg_310x310.jpg"
+              alt="">
+          </div>
+          <p class="name">[独霸保罗]男士</p>
+          <p class="price">¥5.1 <span>券后</span></p>
+        </a>
+        <a class="">
+          <div class="pic">
+            <img src="https://img.alicdn.com/imgextra/i3/3405808014/TB1igxtjkKWBuNjy1zjXXcOypXa_!!0-item_pic.jpg_310x310.jpg"
+              alt="">
+          </div>
+          <p class="name">[独霸保罗]男士</p>
+          <p class="price">¥5.1 <span>券后</span></p>
+        </a>
+        <a class="">
+          <div class="pic">
+            <img src="https://img.alicdn.com/imgextra/i3/3405808014/TB1igxtjkKWBuNjy1zjXXcOypXa_!!0-item_pic.jpg_310x310.jpg"
+              alt="">
+          </div>
+          <p class="name">[独霸保罗]男士</p>
+          <p class="price">¥5.1 <span>券后</span></p>
+        </a>
+      </div>
+    </section>
+    <section class="product">
+        <div class="title">
+            <h4>商家优惠信息 实时直播</h4>
+            <span>6691</span>
+          </div>
+          <div class="product-content">
+            <script id="productHtmlTpl" type="text/html">
+              {{each result}}
+              <div class="content">
+                  <div class="pic">
+                  {{@$value.productImg}}
+                  </div>
+                  <p class="name">{{@$value.productName}}</p>
+                  <p class="price-buyed">
+                    <span class="price"><span>{{@$value.productPrice}}</span></span>
+                    <span class="buyed"><span class="num">666</span> 人已买</span>
+                  </p>
+                </div>
+                {{/each}}
+            </script>
+            <div class="content">
+              <div class="pic">
+                <img src="https://img.alicdn.com/bao/uploaded/i1/1627423023/TB2aY7otkSWBuNjSszdXXbeSpXa_!!1627423023-0-item_pic.jpg" alt="">
+              </div>
+              <p class="name">历史最低价!抢到的偷着乐</p>
+              <p class="price-buyed">
+                <span class="price">券后 <span>¥49.00</span></span>
+                <span class="buyed"><span class="num">666</span> 人已买</span>
+              </p>
+            </div>
+          </div>
+    </section>
+    <section id="caozuo-bar">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">返回顶部</a>
+    </section>
+  </main>
+  <div id="footer">
+    <p>
+      <a href="https://at.umeng.com/onelink/Pvmmmy" style="color: Red;">手机APP下载</a>
+      <a href="http://m.manmanbuy.com">
+        慢慢买手机版</a> -- 掌上比价平台</p>
+    <p>
+      m.manmanbuy.com
+      <img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fd.aspx%3fid%3d413211%26f%3dweixinlist&amp;rnd=1570558727"
+        width="0" height="0">
+    </p>
+  </div>
+</body>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="lib/mui/js/mui.min.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/cabbageprice.js"></script>
+
+</html>
