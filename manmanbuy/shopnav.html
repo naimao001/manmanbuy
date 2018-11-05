@@ -5,13 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>比价搜索</title>
+  <title>慢慢买</title>
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-  <link rel="stylesheet/less" href="less/category.less">
+  <link rel="stylesheet/less" href="less/shopnav.less">
   <script src="lib/less/less.js"></script>
-  <script src="js/rem.js"></script>
 </head>
 
 <body>
@@ -32,38 +30,34 @@
   <nav id="slide-nav">
       <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
           <div class="mui-scroll">
-              <a class="mui-control-item">
+              <a class="mui-control-item mui-active">
                   首页
               </a>
-              <a class="mui-control-item">
+              <a class="mui-control-item" id="lessmoney">
                   省钱控
               </a>
-              <a class="mui-control-item">
+              <a class="mui-control-item" id="historyprice">
                   查看历史价
               </a>
-              <a class="mui-control-item mui-active">
+              <a  class="mui-control-item" id="category" >
                   比价搜索
               </a>
-              <a class="mui-control-item">
+              <a class="mui-control-item" id="cn-discount">
                   国内折扣
               </a>
-              <a class="mui-control-item">
+              <a class="mui-control-item" id="cabbageprice">
                   白菜价
               </a>
-              <a class="mui-control-item">
+              <a class="mui-control-item" id="hourstop">
                   小时风云榜
               </a>
           </div>
       </div>
   </nav>
-  
+
   <!-- 主体部分 -->
   <main id="main">
-    <section id="categoryPanel">
-        <ul class="mui-table-view"> 
-        
-        </ul>        
-    </section>
+    
     <section id="caozuo-bar">
       <a href="#">登录</a>
       <a href="#">注册</a>
@@ -81,31 +75,11 @@
         width="0" height="0">
     </p>
   </div>
-
-
-  <script id="firstCateTpl" type="text/html">
-    {{each result}}
-    <li class="mui-table-view-cell mui-collapse" data-id="{{$value.titleId}}">
-        <a class="mui-navigate-right first-cate" href="#" >{{$value.title}}</a>
-        <div class="mui-collapse-content">
-          <div class="mui-row">
-            
-          </div>
-        </div>
-    </li>
-    {{/each}}
-  </script>
-      
-  <script id="secondCateTpl" type="text/html">
-    {{each result value}}
-    <div class="mui-col-xs-4" data-cateid='{{value.categoryId}}'>{{value.category}}</div>
-    {{/each}}
-  </script>
 </body>
+<
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
-<script src="lib/nprogress/nprogress.js"></script>
-<script src="js/category.js"></script>
+<script src="js/shopnav.js"></script>
 
 </html>

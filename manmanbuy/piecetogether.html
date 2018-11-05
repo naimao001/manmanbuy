@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="lib/nprogress/nprogress.css">
-  <link rel="stylesheet/less" href="less/cn-discount-detail.less">
+  <link rel="stylesheet/less" href="less/piecetogether.less">
   <script src="lib/less/less.js"></script>
   <script src="js/rem.js"></script>
 </head>
@@ -32,62 +32,71 @@
   <nav id="slide-nav">
     <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
       <div class="mui-scroll">
-        <a href="index.html" class="mui-control-item mui-active">
+        <a class="mui-control-item mui-active">
           首页
         </a>
-        <a class="mui-control-item">
+        <a class="mui-control-item" id="lessmoney">
           省钱控
         </a>
-        <a class="mui-control-item">
+        <a class="mui-control-item" id="historyprice">
           查看历史价
         </a>
         <a class="mui-control-item" id="category">
           比价搜索
         </a>
-        <a class="mui-control-item">
+        <a class="mui-control-item" id="cn-discount">
           国内折扣
         </a>
-        <a class="mui-control-item">
+        <a class="mui-control-item" id="cabbageprice">
           白菜价
         </a>
-        <a class="mui-control-item">
+        <a class="mui-control-item" id="hourstop">
           小时风云榜
         </a>
       </div>
     </div>
   </nav>
-
+  <nav id="select-nav">
+    <select id="shop">
+      <script type="text/html" id="shopTpl">
+        {{each result}}
+       <option value="{{$value.shopId}}">{{$value.shopName}}</option>
+       {{/each}}
+      </script>
+    </select>
+    <select id="area">
+      <script type="text/html" id="areaTpl">
+        {{each result}}
+         <option value="{{$value.areaId}}">{{$value.areaName}}</option>
+         {{/each}}
+        </script>
+    </select>
+    <select id="price">
+      <option value="全部价格" selected>全部价格</option>
+      <option value="1"></option>
+      <option value="2"></option>
+      <option value="3"></option>
+    </select>
+  </nav>
   <!-- 主体部分 -->
   <main id="main">
     <section id="product">
-      <script id="productContentTpl" type="text/html">
-        {{each result}}
       <div class="product-content">
-          <p class="title">{{$value.productName}}</p>
-          <p class="price">{{$value.productPinkage}}</p>
-          <p class="introductions">
-              <span>{{$value.productFrom}}</span> | <span>{{$value.productTime}}</span> | <span> {{$value.productTips}} </span>
-            </p>
-            <p class="description">{{$value.productInfo}}</p>
-          <div class="pic">
-            {{@$value.productImg}}
-          </div>
-          <div class="straight-href"><button type="button" class="mui-btn">直达链接</button></div>
-        </div>
-        {{/each}}
-    </script>
-      <div class="product-content">
-        <p class="title">金龙鱼 苏北米 软香稻大米 10KG * 2件</p>
-        <p class="price">82.80元 (合41.4元/件)</p>
-        <p class="introductions">
-          <span>京东商城</span> | <span>11-01 20:06</span> | <span> 拼了命 | 慢慢买</span>
-        </p>
-        <p class="description">这款金龙鱼 软香稻大米 ，产自苏北地区，采用低温烘干存储等工序，保证大米的品质，采用二氧化碳保鲜包装，防霉防虫，规格10KG。</p>
-        <div class="pic">
-          <img src="http://img2019.manmanbuy.com/r_img/img/20181101/20/f7763f05d9b74b18bd0753b17b05749b.jpg" alt="">
-        </div>
-
-        <div class="straight-href"><button type="button" class="mui-btn">前往购买</button></div>
+        <script id="productTpl" type="text/html">
+          {{each result}}
+          <div class="content">
+              <div class="pic">
+                <img src="{{$value.productImg}}" alt="">
+              </div>
+              <p class="title">{{$value.productName}}</p>
+              <p class="price-coudan">
+                <span class="price">{{$value.productPrice}}</span>
+                <button type="button" class="btn">去凑单</button>
+              </p>
+              </div>
+              {{/each}}
+        </script>
+        
       </div>
     </section>
     <section id="caozuo-bar">
@@ -108,10 +117,12 @@
     </p>
   </div>
 </body>
+
+
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="js/cn-discount-detail.js"></script>
+<script src="js/piecetogether.js"></script>
 
 </html>

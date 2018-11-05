@@ -1,10 +1,18 @@
 $(function () {
-	var mmb = new MMB();
+  var mmb = new MMB();
+  $(document).on('ajaxStart',function () {
+    NProgress.start()
+  })
+  $(document).on('ajaxStop',function () {
+    NProgress.done()
+  })
 	mmb.getIndexMenu()
   mmb.getdisCount()
   mmb.tapMore()
   mmb.initNavScroll()
   mmb.someTap()
+ 
+  
 });
 //创建一个慢慢买的构造函数
 var MMB = function () {

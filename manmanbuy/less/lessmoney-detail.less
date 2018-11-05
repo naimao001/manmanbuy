@@ -1,134 +1,132 @@
 @import 'base.less';
-body {
-	// background-color: #fff;
+ body {
+     // background-color: #fff;
 }
-
-#main {
-	#product {
-		background-color: #fff;
-		padding: 10px 10px 20px 10px;
-		text-align: center;
-		.product-content {
-			.pic {
-				width: 201px;
-				height: 201px;
-				margin: 0 auto;
-				img {
-					width: 100%;
-				}
-			}
-			.introductions {
-				font-size: 12px;
-				color: #999;
-				span {
-					margin-right: 5px;
-				}
-			}
-			.title {
-				font-size: 22px;
-				color: rgb(15, 9, 9);
-				font-weight: 600;
-			}
-			.price {
-				font-size: 16px;
-				color: #f85000;
-			}
-			.straight-href {
-				.mui-btn {
-					width: 150px;
-					height: 35px;
-					color: #fff;
-					background-color: #f85000;
-					border-radius: 8px;
-				}
-			}
-			.description {
-				margin-top: 20px;
-				text-align: left;
-				font-size: 16px;
-				color: #000;
-			}
-		}
-	}
-	#new-comment {
-		background-color: #fff;
-		h4 {
-			line-height: 30px;
-			text-align: center;
-			margin-top: 0;
-			margin-bottom: 0;
-			background-color: #eee;
-		}
-		.productComment {
-			padding: 5px;
-			.tit {
-				font-size: 16px;
-			}
-			textarea {
-				position: relative;
-			}
-			.ctrl {
-				position: absolute;
-				right: 6px;
-				bottom: -108px;
-				.tjdp {
-					border: 1px solid #ff841d;
-					background-color: #ff841d;
-					border-radius: 10px;
-				}
-			}
-
-			.reply {
-        + .tit {
-          margin-top: 10px;
-				}
-      }
-      #newcomment {
-        margin-bottom: 20px;
-      }
-			.list {
-        padding: 10px 5px 20px;
-				ul {
-					li {
-						display: flex;
-						.userimg {
-							width: 40px;
-							height: 40px;
-							img {
-								width: 100%;
-								border-radius: 50%;
-							}
-						}
-					}
-					.con {
-            flex: 1;
-            margin-left: 10px;;
-						.name {
-							display: flex;
-							justify-content: space-between;
-							font-size: 14px;
-							.username {
-								color: #94bdd6;
-							}
-							.time {
-								color: #999;
-							}
-						}
-					}
-
-					.content {
-            margin-top: 5px;
-					}
-				}
-			}
-		}
-	}
+ #main {
+     #product {
+         background-color: #fff;
+         padding: 0.1rem 0.1rem 0.2rem 0.1rem;
+         text-align: center;
+         .product-content {
+             .pic {
+                 width: 2.01rem;
+                 height: 2.01rem;
+                 margin: 0 auto;
+                 img {
+                     width: 100%;
+                }
+            }
+             .introductions {
+                 font-size: 0.12rem;
+                 color: #999;
+                 span {
+                     margin-right: 0.05rem;
+                }
+            }
+             .title {
+                 font-size: 0.22rem;
+                 color: rgb(15, 9, 9);
+                 font-weight: 600;
+            }
+             .price {
+                 font-size: 0.16rem;
+                 color: #f85000;
+            }
+             .straight-href {
+                 .mui-btn {
+                     width: 1.5rem;
+                     height: 0.35rem;
+                     color: #fff;
+                     background-color: #f85000;
+                     border-radius: 0.08rem;
+                }
+            }
+             .description {
+                 margin-top: 0.2rem;
+                 text-align: left;
+                 font-size: 0.16rem;
+                 color: #000;
+            }
+        }
+    }
+     #new-comment {
+         background-color: #fff;
+         h4 {
+             line-height: 0.3rem;
+             text-align: center;
+             margin-top: 0;
+             margin-bottom: 0;
+             background-color: #eee;
+        }
+         .productComment {
+             padding: 0.05rem;
+             .tit {
+                 font-size: 0.16rem;
+            }
+             textarea {
+                 position: relative;
+            }
+             .ctrl {
+                 position: absolute;
+                 right: 0.06rem;
+                 bottom: -1.08rem;
+                 .tjdp {
+                     border: 1px solid #ff841d;
+                     background-color: #ff841d;
+                     border-radius: 0.1rem;
+                }
+            }
+             .reply {
+                 + .tit {
+                     margin-top: 0.1rem;
+                }
+            }
+             #newcomment {
+                 margin-bottom: 0.2rem;
+            }
+             .list {
+                 padding: 0.1rem 0.05rem 0.2rem;
+                 ul {
+                     li {
+                         display: flex;
+                         .userimg {
+                             width: 0.4rem;
+                             height: 0.4rem;
+                             img {
+                                 width: 100%;
+                                 border-radius: 50%;
+                            }
+                        }
+                    }
+                     .con {
+                         flex: 1;
+                         margin-left: 0.1rem;
+                         ;
+                         .name {
+                             display: flex;
+                             justify-content: space-between;
+                             font-size: 0.14rem;
+                             .username {
+                                 color: #94bdd6;
+                            }
+                             .time {
+                                 color: #999;
+                            }
+                        }
+                    }
+                     .content {
+                         margin-top: 0.05rem;
+                    }
+                }
+            }
+        }
+    }
 }
-
-#footer {
-	margin-top: 10px;
-	p {
-		margin-bottom: 0px;
-		text-align: center;
-	}
+ #footer {
+     margin-top: 0.1rem;
+     p {
+         margin-bottom: 0rem;
+         text-align: center;
+    }
 }
+ 

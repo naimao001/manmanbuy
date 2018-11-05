@@ -1,0 +1,60 @@
+@import 'base.less';
+body {
+	// background-color: #fff;
+}
+#select-nav {
+	display: flex;
+	option {
+		width: 3.75rem;
+	}
+}
+#main {
+	#product {
+		.product-content {
+			display: flex;
+			flex-wrap: wrap;
+			.content {
+				background-color: #fff;
+				width: 50%;
+				text-align: center;
+				margin-left: 0.1rem;
+				.pic {
+					width: 1.74rem;
+					height: 1.74rem;
+					margin: 0 auto;
+					img {
+						width: 100%;
+					}
+				}
+				.title {
+					font-size: 0.14rem;
+					color: #000;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 1;
+				}
+				.price-coudan {
+					display: flex;
+					justify-content: space-between;
+					margin-left: 0.1rem;
+					margin-right: 0.1rem;
+					.price {
+						color: red;
+						font-size: 0.18rem;
+						line-height: 0.3rem;
+					}
+					.btn {
+						background-color: #ff9501;
+						color: white;
+						width: 0.7rem;
+						height: 0.3rem;
+						line-height: 0.3rem;
+						padding: 0rem;
+					}
+				}
+			}
+		}
+	}
+}

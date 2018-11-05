@@ -8,8 +8,10 @@
   <title>慢慢买</title>
   <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="lib/nprogress/nprogress.css">
   <link rel="stylesheet/less" href="less/lessmoney.less">
   <script src="lib/less/less.js"></script>
+  <script src="js/rem.js"></script>
 </head>
 
 <body>
@@ -28,46 +30,41 @@
   </header>
   <!-- 滑动滚动条 -->
   <nav id="slide-nav">
-      <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-          <div class="mui-scroll">
-              <a class="mui-control-item mui-active">
-                  首页
-              </a>
-              <a class="mui-control-item">
-                  省钱控
-              </a>
-              <a class="mui-control-item">
-                  查看历史价
-              </a>
-              <a  class="mui-control-item" id="category" >
-                  比价搜索
-              </a>
-              <a class="mui-control-item">
-                  国内折扣
-              </a>
-              <a class="mui-control-item">
-                  白菜价
-              </a>
-              <a class="mui-control-item">
-                  小时风云榜
-              </a>
-          </div>
+    <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+      <div class="mui-scroll">
+        <a class="mui-control-item mui-active">
+          首页
+        </a>
+        <a class="mui-control-item">
+          省钱控
+        </a>
+        <a class="mui-control-item">
+          查看历史价
+        </a>
+        <a class="mui-control-item" id="category">
+          比价搜索
+        </a>
+        <a class="mui-control-item">
+          国内折扣
+        </a>
+        <a class="mui-control-item">
+          白菜价
+        </a>
+        <a class="mui-control-item">
+          小时风云榜
+        </a>
       </div>
+    </div>
   </nav>
 
   <!-- 主体部分 -->
   <main id="main">
     <section id="product">
-      <div class="product-content">
-        <div class="left"><img src="./images/discount-image.jpg" alt=""></div>
-        <div class="right clearfix">
-          <p class="description">双11预售: 特步 经典情侣款小白鞋 <span>55元包邮</span> </p>
-          <div class="right-b">
-            <span class="store-time">
-              <span>天猫旗舰店</span> |<span>10-30 13:56</span> </span>
-            <span class="comment"><i class="fa fa-comment"></i> 6</span>
-          </div>
-
+      <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+        <!-- 区域滚动的子容器 -->
+        <div class="mui-scroll">
+          <!--真实要刷新的滑动的内容-->
+         
         </div>
       </div>
     </section>
@@ -90,26 +87,26 @@
   </div>
 </body>
 <script id="productTpl" type="text/html">
-{{each result }}
-<div class="product-content" data-productid="{{$value.productId}}">
-    <div class="left">
-      {{@$value.productImgSm}}
-    </div>
-    <div class="right clearfix">
-      <p class="description">{{$value.productName}} <span>{{$value.productPinkage}}元包邮</span> </p>
-      <div class="right-b">
-        <span class="store-time">
-          <span>{{$value.productFrom}}</span> |<span>{{$value.productTime}}</span> </span>
-        <span class="comment"><i class="fa fa-comment"></i>{{$value.productComCount}}</span>
-      </div>
-
-    </div>
-  </div>
-{{/each}}
+  {{each result }}
+          <div class="product-content" data-productid="{{$value.productId}}">
+              <div class="left">
+                {{@$value.productImgSm}}
+              </div>
+              <div class="right clearfix">
+                <p class="description">{{$value.productName}} <span>{{$value.productPinkage}}元包邮</span> </p>
+                <div class="right-b">
+                  <span class="store-time">
+                    <span>{{$value.productFrom}}</span> |<span>{{$value.productTime}}</span> </span>
+                  <span class="comment"><i class="fa fa-comment"></i>{{$value.productComCount}}</span>
+                </div>
+              </div>
+            </div>
+          {{/each}}
 </script>
 <script src="lib/zepto/zepto.min.js"></script>
 <script src="lib/mui/js/mui.min.js"></script>
 <script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/nprogress/nprogress.js"></script>
 <script src="js/lessmoney.js"></script>
 
 </html>

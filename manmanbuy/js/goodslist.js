@@ -1,5 +1,11 @@
 $(function () {
   var mmb = new MMB();
+  $(document).on('ajaxStart', function () {
+    NProgress.start()
+  })
+  $(document).on('ajaxStop', function () {
+    NProgress.done()
+  })
   mmb.getproductlist()
   mmb.paginationFnc()
   mmb.goProductDetail()
@@ -14,11 +20,13 @@ MMB.prototype = {
   baseURI: 'http://localhost:9090/api/',
   // baseURI:'http://mmb.ittun.com/api/',
   pageid: 1,
-  optionNum:0,
+  optionNum: 0,
+  isFirst: true,
   getproductlist() {
     var cateId = this.GetQueryString('cateId')
     var that = this
     // console.log(cateId)
+
     $.ajax({
       url: this.baseURI + "getproductlist",
       data: {
@@ -36,8 +44,11 @@ MMB.prototype = {
         console.log(data)
         var productHtml = template('productHtmlTpl', data)
         $('#productList').html(productHtml)
-        var paginationHtml = template('paginationHtmlTpl', data)
-        $('#pagination').html(paginationHtml)
+        if (that.isFirst) {
+          that.isFirst = false;
+          var paginationHtml = template('paginationHtmlTpl', data)
+          $('#pagination').html(paginationHtml)
+        }
       }
     })
   },
@@ -52,10 +63,10 @@ MMB.prototype = {
         })
         return
       }
-      that.pageid-- 
+      that.pageid--
       // console.log(that.pageid)
       that.getproductlist()
-      $('.pageSelect').val(that.pageid/that.optionNum)
+      $('.pageSelect').val(that.pageid / that.optionNum)
     })
     $('#pagination').on('tap', '.next', function () {
       // console.log($(this))
@@ -70,12 +81,12 @@ MMB.prototype = {
       that.pageid++
       // console.log(that.pageid)
       that.getproductlist()
-      $('.pageSelect').val(that.pageid/that.optionNum)
+      $('.pageSelect').val(that.pageid / that.optionNum)
     })
     $('#pagination').on('change', '.pageSelect', function () {
       that.pageid = $(this).val()
       that.getproductlist()
-      $('.pageSelect').text(that.pageid/that.optionNum)
+
     })
   },
   goProductDetail() {

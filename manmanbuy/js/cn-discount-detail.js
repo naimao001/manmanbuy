@@ -1,5 +1,11 @@
 $(function () {
   var mmb = new MMB();
+  $(document).on('ajaxStart',function () {
+    NProgress.start()
+  })
+  $(document).on('ajaxStop',function () {
+    NProgress.done()
+  })
   mmb.getdiscountproduct()
 });
 //创建一个慢慢买的构造函数
